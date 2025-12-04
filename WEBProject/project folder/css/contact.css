@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden !important;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrap {
+    flex: 1; /* Push footer to bottom */
+}
+
+
+
+/* ==============================
+   NAVBAR + LOGO
+============================== */
+
+.logo-img {
+    height: 55px;
+    width: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.pill-link {
+    color: white !important;
+    font-weight: 700;
+    padding: 8px 18px !important;
+    border-radius: 999px;
+    transition: 0.25s;
+    letter-spacing: 0.5px;
+}
+
+.pill-link:hover {
+    background-color: white;
+    color: #0033A1 !important;
+}
+
+.active-pill {
+    background-color: #f28f8f;
+    color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+
+
+
+/* ==============================
+   CONTACT HEADER
+============================== */
+.contact-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.contact-header h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #C8102E;
+    line-height: 1.2;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .contact-header h1 {
+        font-size: 32px;
+    }
+}
+
+
+
+/* ==============================
+   CONTACT FORM
+============================== */
+.contact-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+}
+
+.contact-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #C8102E;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #a80000;
+}
+
+
+
+/*footer*/
+.footer {
+    background-color: #C8102E;
+    color: white;
+    padding: 50px 0 30px;
+    width: 100%;
+}
+
+/* No bullets anywhere */
+.footer * {
+    list-style: none !important;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-logo {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-slogan {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* ICONS */
+.footer-socials i {
+    font-size: 35px;
+    margin-right: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-socials i:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.footer-phone {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    font-size: 14px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.footer a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #ffe6e6 !important;
+}
+
+
+
+/* ==============================
+   RESPONSIVE FOOTER / FORM
+============================== */
+@media (max-width: 600px) {
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-socials i {
+        font-size: 26px;
+        margin: 0 8px;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1180px) {
+
+    .contact-header h1 {
+        font-size: 40px;
+    }
+
+    .contact-form {
+        padding: 35px;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+    .footer-socials i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .contact-header h1 {
+        font-size: 28px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .footer-socials i {
+        font-size: 22px;
+    }
+}

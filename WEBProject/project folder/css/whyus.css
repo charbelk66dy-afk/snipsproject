@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrap {
+    flex: 1; /* pushes footer to the bottom */
+}
+
+
+
+/* ==============================
+   NAVBAR + LOGO
+============================== */
+
+.logo-img {
+    height: 55px;
+    width: auto !important;
+    object-fit: contain;
+    display: block;
+}
+
+.pill-link {
+    color: white !important;
+    font-weight: 700;
+    padding: 8px 18px !important;
+    border-radius: 999px;
+    transition: 0.25s;
+    letter-spacing: 0.5px;
+}
+
+.pill-link:hover {
+    background-color: white;
+    color: #0033A1 !important;
+}
+
+.active-pill {
+    background-color: #f28f8f;
+    color: white !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+.whyus-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.whyus-hero h1 {
+    font-size: 45px;
+    color: #C8102E;
+    font-weight: 800;
+}
+
+.whyus-hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #444;
+}
+
+
+
+/* ==============================
+   REASONS GRID
+============================== */
+.reasons-grid {
+    width: 85%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.reason-card {
+    background: #FFE5E5;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.reason-card h3 {
+    color: #C8102E;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.reason-card p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.reason-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+
+/* ==============================
+             FOOTER 
+============================== */
+
+.footer {
+    background-color: #C8102E;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.footer-logo {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-slogan {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+
+.footer-socials i {
+    font-size: 35px;
+    margin-right: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-socials i:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.footer-phone {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+.footer a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #ffe6e6 !important;
+}
+
+
+
+
+/* ==============================
+   MOBILE
+============================== */
+@media (max-width: 600px) {
+    .whyus-hero h1 {
+        font-size: 32px;
+    }
+
+    .reasons-grid {
+        width: 90%;
+    }
+
+    .footer-socials i {
+        font-size: 26px;
+    }
+}
+
+
+
+/* ==============================
+   TABLET / iPad
+============================== */
+@media (min-width: 820px) and (max-width: 1180px) {
+
+    .whyus-hero {
+        padding-top: 40px;
+    }
+
+    .reasons-grid {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+}

@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden !important; /* Prevent sideways scroll */
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrap {
+    flex: 1; /* Keeps footer at bottom */
+}
+
+
+
+/* ==============================
+   NAVBAR + LOGO 
+============================== */
+
+.logo-img {
+    height: 55px;
+    width: auto !important;
+    object-fit: contain;
+}
+
+.pill-link {
+    color: white !important;
+    font-weight: 700;
+    padding: 8px 18px !important;
+    border-radius: 999px;
+    transition: .25s;
+    letter-spacing: 0.5px;
+}
+
+.pill-link:hover {
+    background-color: #ffffff;
+    color: #0033A1 !important;
+}
+
+.active-pill {
+    background-color: #f28f8f;
+    color: white !important;
+}
+
+/* same burger icon color as products */
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #c00000;
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 12px 22px;
+    background-color: #c00000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #a80000;
+}
+
+.btn-outline {
+    padding: 12px 22px;
+    border: 2px solid #c00000;
+    color: #c00000;
+    border-radius: 8px;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background-color: #c00000;
+    color: white;
+}
+
+.hero-image img {
+    width: 330px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* ==============================
+   INFO SECTION
+============================== */
+.info-section {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 33px;
+    color: #c00000;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    width: 70%;
+    margin: auto;
+    background-color: #ffeaea;
+    padding: 22px;
+    border-radius: 15px;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/*footer*/
+.footer {
+    background-color: #C8102E;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+/* (optional but safe) – remove bullets anywhere */
+.footer * {
+    list-style: none !important;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.footer-logo {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-slogan {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+
+.footer-socials i {
+    font-size: 35px;
+    margin-right: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-socials i:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.footer-phone {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+.footer a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #ffe6e6 !important;
+}
+
+
+
+/* ==============================
+   MOBILE (Phones < 600px)
+============================== */
+@media (max-width: 600px) {
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 240px;
+    }
+
+    .info-box {
+        width: 90%;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-socials i {
+        margin: 0 8px;
+        font-size: 26px;
+    }
+}
+
+/* TABLET (820-1180px) */
+@media (min-width: 820px) and (max-width: 1180px) {
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-image img {
+        width: 280px;
+    }
+
+    .info-section {
+        margin: 30px auto;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+/* EXTRA SMALL (<= 380px) */
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    .footer-socials i {
+        font-size: 22px;
+    }
+}
